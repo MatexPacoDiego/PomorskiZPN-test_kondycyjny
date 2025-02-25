@@ -1,6 +1,6 @@
 import style from "./Okregowa_IVLiga.module.scss";
 import headerImage from "../../assets/la_tshirt.png";
-import { useRef } from "react";
+import {useRef, useState} from "react";
 import gwizdek from "../../assets/_pl_sound_gwizdek-sedziego_.mp3";
 import beep from "../../assets/beep-07a.mp3";
 import boisko from "../../assets/boisko_sedzia 1.png";
@@ -9,6 +9,8 @@ export default function Okregowa_IVLiga() {
   const runningRef = useRef<boolean>(false);
   const beepRef = useRef<HTMLAudioElement | null>(null);
   const gwizdekRef = useRef<HTMLAudioElement | null>(null);
+  const wynikRef = useRef<HTMLSpanElement | null>(null);
+  const [laps, setLaps] = useState<number>(0);
 
   const playBeep = () => {
     return new Promise<void>((resolve) => {
@@ -52,24 +54,14 @@ export default function Okregowa_IVLiga() {
 
   const startTest = async () => {
     runningRef.current = true;
-    let lapCount = 0;
+    setLaps(0);
 
-    for (let i = 1; i <= 40; i++) {
+    for (let i = 3; i <= 40; i++) {
       if (!runningRef.current) return;
 
       if (i % 4 === 0 && i !== 0) {
-        lapCount++;
-        const wynikElement = document.getElementById("wynik");
-        if (wynikElement) {
-          wynikElement.innerHTML = `${lapCount}`;
-        }
-      } else {
-        const wynikElement = document.getElementById("wynik");
-        if (wynikElement) {
-          wynikElement.innerHTML = `${lapCount}`;
-        }
+        setLaps((prev) => prev + 1);
       }
-
       for (let j = 1; j <= 35; j++) {
         if (!runningRef.current) return;
 
@@ -132,8 +124,8 @@ export default function Okregowa_IVLiga() {
           <div className={style.liczba}>
             <p className={style.tekst}>
               Liczba okrążeń:{" "}
-              <span className={style.bold} id="wynik">
-                0
+              <span className={style.bold} ref={wynikRef}>
+                {laps}
               </span>
             </p>
           </div>{" "}
