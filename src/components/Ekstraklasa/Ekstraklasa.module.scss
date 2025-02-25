@@ -1,0 +1,101 @@
+.container {
+  max-width: 80vw;
+  width: 100%;
+  margin-left: 10%;
+}
+
+.header h3 {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+.bold {
+  font-weight: bold;
+}
+.main {
+  max-width: 75vw;
+  width: 100%;
+  margin-left: 5%;
+  margin-bottom: 5%;
+}
+
+.table th {
+  background-color: #ff1a1a;
+  color: white;
+}
+
+.table td {
+  background-color: #eee;
+}
+
+.table {
+  display: flex;
+  width: 100%;
+  max-width: 75vw;
+
+  justify-content: center;
+}
+
+.table th,
+.table td {
+  padding: 1.5%;
+  font-weight: bold;
+  text-align: center;
+}
+
+.table table {
+  width: 80%;
+  border-spacing: 2%;
+  border-collapse: separate;
+}
+
+.trening {
+  width: 100%;
+  text-align: center;
+}
+
+.text {
+  font-size: 120%;
+}
+
+button {
+  width: 15%;
+  padding: 1% 0;
+  font-size: 120%;
+  font-weight: bold;
+  margin-right: 5%;
+  border-radius: 23px;
+  border: 0;
+  background-color: #ff1a1a;
+  color: white;
+}
+
+.button {
+  background-color: #eee;
+  color: black;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.liczba {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.tekst {
+  width: 80%;
+  font-size: 120%;
+}
+.liczba img {
+  width: 75%;
+}
+
+.liczba a {
+  font-size: 100%;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
