@@ -21,9 +21,7 @@ import ball from "./assets/fluent_sport-soccer-20-regular.png";
 import pitch from "./assets/lucide-lab_soccer-pitch.png";
 import rule from "./assets/material-symbols-light_rule.png";
 import KlasaB_A from "./components/KlasaB_A/KlasaB_A";
-import message from "./assets/mdi_bell-notification-outline.png";
-import profile from "./assets/iconamoon_profile.png";
-import trojkat from "./assets/Polygon 1.png";
+
 import zebatka from "./assets/weui_setting-outlined.png";
 
 const RootLayout = () => {
@@ -35,12 +33,6 @@ const RootLayout = () => {
           <h1>
             <b className={style.bold}>Sędziowskie</b> Testy Kondycyjne
           </h1>
-        </div>
-        <div className={style.profile}>
-          <img className={style.bell} src={message} alt="Wiadomosci" />
-          <h3>Matex</h3>
-          <img className={style.profil} src={profile} alt="Profil" />
-          <img src={trojkat} alt="Trojkąt" />
         </div>
       </header>
       <main className={style.main}>
